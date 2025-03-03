@@ -4,6 +4,7 @@ import cookie from '@fastify/cookie';
 import session from '@fastify/session';
 import { store } from './cache/session';
 import { authRoutes } from './routes/auth.routes';
+import { mealRoutes } from './routes/meal.routes';
 
 export const app = fastify({ logger: true });
 
@@ -24,3 +25,6 @@ app.register(session, {
 });
 
 app.register(authRoutes);
+app.register(mealRoutes, {
+  prefix: '/meals',
+});

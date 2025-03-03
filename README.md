@@ -1,7 +1,7 @@
 Como temos um arquivo docker-compose, para iniciar servidor Redis e PostgreSQL, via Docker, sem persistência de dados em volume:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Gerar o arquivo tsconfig.json:
